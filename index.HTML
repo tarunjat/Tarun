@@ -1,0 +1,260 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+<meta charset="UTF-8">\
+<meta name="viewport" content="width=device-width, initial-scale=1.0">\
+<title>For My Motuuu \uc0\u10084 \u65039 </title>\
+\
+<style>\
+body\{\
+  margin:0;\
+  font-family:'Segoe UI',sans-serif;\
+  background:linear-gradient(135deg,#ff6fa5,#ff9ec4);\
+  color:#fff;\
+  text-align:center;\
+  overflow:hidden;\
+\}\
+\
+/* HEARTS */\
+.heart\{\
+  position:fixed;\
+  bottom:-20px;\
+  font-size:18px;\
+  animation:float 6s linear infinite;\
+\}\
+@keyframes float\{\
+  from\{transform:translateY(0);opacity:1;\}\
+  to\{transform:translateY(-120vh);opacity:0;\}\
+\}\
+\
+/* STEPS */\
+.step\{\
+  min-height:100vh;\
+  display:none;\
+  padding:40px 20px;\
+  box-sizing:border-box;\
+  animation:fade 1s ease;\
+\}\
+.step.active\{\
+  display:flex;\
+  flex-direction:column;\
+  justify-content:center;\
+  align-items:center;\
+\}\
+@keyframes fade\{\
+  from\{opacity:0;transform:translateY(30px);\}\
+  to\{opacity:1;transform:translateY(0);\}\
+\}\
+\
+button\{\
+  margin-top:25px;\
+  padding:14px 34px;\
+  font-size:18px;\
+  border:none;\
+  border-radius:30px;\
+  background:#fff;\
+  color:#ff4d8d;\
+  cursor:pointer;\
+\}\
+\
+/* PHOTO BOX */\
+.photo-box\{\
+  position:relative;\
+  width:280px;\
+  height:360px;\
+  border-radius:20px;\
+  overflow:hidden;\
+  margin:20px 0;\
+\}\
+.photo-box img\{\
+  width:100%;\
+  height:100%;\
+  object-fit:cover;\
+\}\
+.overlay\{\
+  position:absolute;\
+  inset:0;\
+  background:rgba(255,77,141,0.92);\
+  display:flex;\
+  align-items:center;\
+  justify-content:center;\
+  padding:20px;\
+  font-size:16px;\
+  line-height:1.6;\
+  opacity:0;\
+  transition:0.6s ease;\
+\}\
+.photo-box.show .overlay\{\
+  opacity:1;\
+\}\
+\
+/* NO BUTTON */\
+#no\{\
+  position:absolute;\
+  background:#ff2e63;\
+  color:white;\
+\}\
+\
+/* FLOWERS */\
+.flower\{\
+  position:fixed;\
+  top:-20px;\
+  font-size:22px;\
+  animation:fall 5s linear infinite;\
+\}\
+@keyframes fall\{\
+  from\{transform:translateY(0);opacity:1;\}\
+  to\{transform:translateY(120vh);opacity:0;\}\
+\}\
+\
+/* LETTER */\
+.letter\{\
+  background:#fff;\
+  color:#000;\
+  border-radius:18px;\
+  padding:22px;\
+  width:300px;\
+  animation:fade 1s ease;\
+\}\
+.letter img\{\
+  width:100%;\
+  border-radius:14px;\
+  margin-top:15px;\
+\}\
+</style>\
+</head>\
+\
+<body>\
+\
+<!-- BACKGROUND MUSIC -->\
+<audio id="bgm" loop>\
+  <source src="https://www.dropbox.com/scl/fi/f902mnbtj2eotpojnseqw/KAUN-TUJHE-KoshalWorld.Com.mp3?rlkey=mr1lj6d8f0jafbeu39u6c7yvr&raw=1" type="audio/mpeg">\
+</audio>\
+\
+<!-- STEP 1 -->\
+<div class="step active">\
+  <h2>Hey Motuuu \uc0\u10084 \u65039 </h2>\
+  <p>Happy Valentine\'92s Day</p>\
+  <button onclick="next()">Start</button>\
+</div>\
+\
+<!-- PHOTO 1 -->\
+<div class="step">\
+  <div class="photo-box" onclick="reveal(this)">\
+    <img src="https://i.postimg.cc/MnMz74GY/IMG-2948.jpg">\
+    <div class="overlay">\
+      plzz aaja yrr vapis m tere hath jood raha hu yrr plzzz \uc0\u55357 \u56911 \u55356 \u57339 \
+    </div>\
+  </div>\
+  <button onclick="next()">Next</button>\
+</div>\
+\
+<!-- PHOTO 2 -->\
+<div class="step">\
+  <div class="photo-box" onclick="reveal(this)">\
+    <img src="https://i.postimg.cc/MnMz74G9/IMG-2949.jpg">\
+    <div class="overlay">\
+      Tu sabse acchi h yrr tere se accha koi ho he nhi sakta yrr tu are so special hai mere liye\uc0\u55357 \u56469 \
+    </div>\
+  </div>\
+  <button onclick="next()">Next</button>\
+</div>\
+\
+<!-- PHOTO 3 -->\
+<div class="step">\
+  <div class="photo-box" onclick="reveal(this)">\
+    <img src="https://i.postimg.cc/tsZ93fgd/IMG-2950.jpg">\
+    <div class="overlay">\
+      Tu bhout acchi h motuuu yrr itni sundar kaise h yrr motuuu \uc0\u55358 \u56831 \u10084 \u65039 \
+    </div>\
+  </div>\
+  <button onclick="next()">Next</button>\
+</div>\
+\
+<!-- VALENTINE -->\
+<div class="step">\
+  <h2>Will you be my Valentine? \uc0\u55357 \u56461 </h2>\
+  <button onclick="yes()"> HAA KYU NHI \uc0\u10084 \u65039 </button>\
+  <button id="no" onmouseover="moveNo()"> NHI \uc0\u55357 \u56864 </button>\
+</div>\
+\
+<!-- LETTER STEP -->\
+<div class="step" id="letterStep">\
+  <div class="letter">\
+    <p>\
+      Motuuu \uc0\u10084 \u65039 ,<br><br>\
+      dekh yrr aisa nhi h ki tu dubra nhi aa sakti h mere pass tu aa sakti h \uc0\u55357 \u56877  matlab tu kar sakti h meri galti maaaf yrr\
+      \uc0\u55357 \u56877  matlab ab se  ek bhi galti nhi karuga yrr na gussa karuga motuu tu jaisa bolegi vaisa he karuga babyyyy\u55358 \u56697  abhi baat hui \
+      hus hisab se i think tu NO he bolegi but plzz but plzz agar m pyaar he nhi karta to itni mheant kyu karta yrrr itne din se code \
+      likh raha hu yrr plzzz yrrr tu aaja vapis yrr or mera to conform bhi nhi h ki kab tak hu matlab tu vapis aa jayegi to m khus \
+      rahuga mera cancer bhi thik ho jayega yrr plzzz aaja vapis yrrr tere hath jodu yrr \uc0\u55357 \u56877 \
+    </p>\
+\
+    <img src="https://i.postimg.cc/MnMz74GY/IMG-2948.jpg">\
+  </div>\
+</div>\
+\
+<script>\
+let s=0;\
+const steps=document.querySelectorAll(".step");\
+const music=document.getElementById("bgm");\
+\
+function next()\{\
+  steps[s].classList.remove("active");\
+  s++;\
+  steps[s].classList.add("active");\
+  music.volume=0.25;\
+  music.play();\
+\}\
+\
+function reveal(box)\{\
+  box.classList.toggle("show");\
+\}\
+\
+function moveNo()\{\
+  const no=document.getElementById("no");\
+  no.style.left=Math.random()*70+"vw";\
+  no.style.top=Math.random()*70+"vh";\
+  alert(" Himmat kaise hui no karne ki \uc0\u55357 \u56877 ");\
+\}\
+\
+function yes()\{\
+  steps[s].classList.remove("active");\
+  document.getElementById("letterStep").classList.add("active");\
+  flowerRain();\
+\}\
+\
+/* HEARTS */\
+setInterval(()=>\{\
+  const h=document.createElement("div");\
+  h.className="heart";\
+  h.innerHTML="\uc0\u10084 \u65039 ";\
+  h.style.left=Math.random()*100+"vw";\
+  document.body.appendChild(h);\
+  setTimeout(()=>h.remove(),6000);\
+\},300);\
+\
+/* FLOWERS */\
+function flowerRain()\{\
+  setInterval(()=>\{\
+    const f=document.createElement("div");\
+    f.className="flower";\
+    f.innerHTML="\uc0\u55356 \u57145 ";\
+    f.style.left=Math.random()*100+"vw";\
+    document.body.appendChild(f);\
+    setTimeout(()=>f.remove(),5000);\
+  \},200);\
+\}\
+</script>\
+\
+</body>\
+</html>}
